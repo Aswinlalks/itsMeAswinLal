@@ -200,7 +200,8 @@ a:hover {
     border: 2px solid #000; /* Add border */
     border-radius: 10px; /* Add border radius */
     transition: background-color 0.3s, color 0.3s;
-    margin: 0 10px; /* Add margin between buttons */
+    margin: 30px 10px; /* Add margin between buttons */
+    
 }
 
 .social-links a:hover {
@@ -225,6 +226,6 @@ a:hover {
         margin: 10px 0; /* Adjust margin for vertical alignment */
         width: 100%; /* Ensure full width on smaller screens */
         max-width: 300px; /* Reduce the width of the boxes */
-        margin: 0 auto; /* Center align the boxes */
+        margin: 10px auto; /* Center align the boxes */
     }
 }
