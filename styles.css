@@ -5,6 +5,7 @@ body {
     background-color: #fff;
     color: #333;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 .container {
@@ -166,10 +167,9 @@ a:hover {
 
 .contact-section {
     margin-top: 100px;
-    border-top: 2px solid #000;
-    padding-top: 20px;
-    padding-left: 40px;
-    text-align: left; /* Center align text */
+    border-top: 1px solid #000;
+    padding-top: 40px;
+    text-align: center; /* Center align text */
 }
 
 .contact-section h2 {
@@ -182,29 +182,31 @@ a:hover {
     font-size: 4rem;
     color: #a0a080;
     margin-top: 0;
+    transition: color 0.5s ease; /* Smooth transition for email color */
 }
 
 .social-links {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 40px;
 }
 
 .social-links a {
     flex: 1; /* Allow buttons to fill the width of their parent */
-    font-size: 6rem;
+    font-size: 2.5rem;
     color: #000;
     text-decoration: none;
     padding: 10px;
-    border: 1px solid #000; /* Add border */    
-    border-radius: 3px; /* Add border radius */
+    border: 2px solid #000; /* Add border */
+    border-radius: 10px; /* Add border radius */
     transition: background-color 0.3s, color 0.3s;
-    margin: 0 3px; /* Add margin between buttons */
+    margin: 0 10px; /* Add margin between buttons */
 }
 
 .social-links a:hover {
-    background-color: #444;
+    background-color: #000;
     color: #fff;
+   
 }
 
 @media (max-width: 768px) {
@@ -216,11 +218,10 @@ a:hover {
     }
     .social-links {
         flex-direction: column; /* Stack social links vertically */
-        gap: 5px; /* Add space between links */
-       
+        gap: 20px; /* Add space between links */
     }
     .social-links a {
         font-size: 2rem;
-        margin: 3px 0; /* Adjust margin for vertical alignment */
+        margin: 10px 0; /* Adjust margin for vertical alignment */
     }
 }
