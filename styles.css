@@ -214,7 +214,7 @@ a:hover {
         font-size: 4rem;
     }
     .contact-section .email {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .social-links {
         flex-direction: column; /* Stack social links vertically */
@@ -223,5 +223,8 @@ a:hover {
     .social-links a {
         font-size: 2rem;
         margin: 10px 0; /* Adjust margin for vertical alignment */
+        width: 100%; /* Ensure full width on smaller screens */
+        max-width: 300px; /* Reduce the width of the boxes */
+        margin: 0 auto; /* Center align the boxes */
     }
 }
