@@ -220,12 +220,13 @@ a:hover {
     .social-links {
         flex-direction: column; /* Stack social links vertically */
         gap: 20px; /* Add space between links */
+        margin-bottom: 40px; /* Ensure gap at the bottom */
     }
     .social-links a {
         font-size: 2rem;
         margin: 10px 0; /* Adjust margin for vertical alignment */
         width: 100%; /* Ensure full width on smaller screens */
         max-width: 300px; /* Reduce the width of the boxes */
-        margin: 30px auto; /* Center align the boxes */
+        margin: 0px auto; /* Center align the boxes */
     }
 }
