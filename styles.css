@@ -226,6 +226,6 @@ a:hover {
         margin: 10px 0; /* Adjust margin for vertical alignment */
         width: 100%; /* Ensure full width on smaller screens */
         max-width: 300px; /* Reduce the width of the boxes */
-        margin: 10px auto; /* Center align the boxes */
+        margin: 30px auto; /* Center align the boxes */
     }
 }
