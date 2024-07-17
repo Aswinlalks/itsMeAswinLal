@@ -1,11 +1,112 @@
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --link-color: #0070f3;
+    --link-hover-color: #005bb5;
+    --button-background: #000;
+    --button-text: #fff;
+    --button-hover-background: #444;
+}
+
+[data-theme="dark"] {
+    --background-color: #333;
+    --text-color: #fff;
+    --link-color: #70a0f3;
+    --link-hover-color: #5085bb;
+    --button-background: #fff;
+    --button-text: #000;
+    --button-hover-background: #bbb;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     overflow-x: hidden; /* Hide horizontal scrollbar */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+}
+
+
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle-label {
+    display: block;
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.theme-toggle-label:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.theme-toggle:checked + .theme-toggle-label {
+    background-color: #919191;
+}
+
+.theme-toggle:checked + .theme-toggle-label:before {
+    transform: translateX(24px);
+}
+
+.theme-toggle-label:active:before {
+    width: 28px;
+}
+/* Rest of your CSS styles... */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color */
 }
 
 .container {

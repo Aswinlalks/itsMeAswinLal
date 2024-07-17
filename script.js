@@ -1,16 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const socialLinks = document.querySelectorAll('.social-link');
-    const emailElement = document.querySelector('.contact-section .email');
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
 
-    socialLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            document.body.style.backgroundColor = this.getAttribute('data-bgcolor');
-            emailElement.style.color = '#000'; // Change email color on hover
-        });
-
-        link.addEventListener('mouseleave', function() {
-            document.body.style.backgroundColor = '#fff';
-            emailElement.style.color = '#a0a080'; // Reset email color on mouse leave
-        });
-    });
+themeToggleBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
 });
